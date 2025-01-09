@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.categorySection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure space between buttons */
+  flex-wrap: wrap; /* Wrap elements if necessary */
+}
+
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.categoryImage {
+  flex: 0 0 calc(100% / 3); /* Show 3 images at a time on larger screens */
+  text-align: center;
+  position: relative;
+}
+
+.categoryImage img {
+  width: 100%;
+  height: 225px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.categoryImage span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.categoryImage:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.categoryImage:hover span {
+  opacity: 1;
+}
+
+.sliderButton {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  outline: none;
+}
+
+.prevButton {
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+}
+
+.nextButton {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+.sliderButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Order Now Button Styles */
+.orderNow {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #ff6347; /* Tomato color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: center;
+  left: 440px;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categoryImage {
+    flex: 0 0 calc(100% / 2); /* Show 2 images at a time on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryImage {
+    flex: 0 0 100%; /* Show 1 image at a time on smaller screens */
+  }
+}

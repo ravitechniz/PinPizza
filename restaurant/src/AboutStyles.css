@@ -1,0 +1,80 @@
+hr {
+    margin: 1px 32%;
+    width: 35%;
+    opacity: 1;
+}
+.aboutSection {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Reverse the order of the flex items */
+    align-items: center; /* Center items vertically */
+    padding: 40px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background color for contrast */
+  }
+  
+  .aboutSection .leftPart {
+    flex: 1; /* Take up half of the section */
+    position: relative; /* For positioning the image */
+  }
+  
+  .aboutSection .aboutbannerImg {
+    width: 100%; /* Make image responsive */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area without stretching */
+  }
+  
+  .aboutSection .rightPart {
+    flex: 1; /* Take up the other half */
+    background-color: rgba(255, 255, 255, 0.9); /*Light background for contrast*/
+    padding: 40px; /* Padding around content */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+  }
+  
+  h2, h3, h4 {
+    margin: 0 0 10px; /* Margin for headings */
+    color: #333; /* Darker text color for readability */
+  }
+  
+  .aboutSection .hours, .aboutSection .contact {
+    margin-top: 20px; /* Space between sections */
+  }
+  
+  .aboutSection .hours ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+  }
+  
+  .aboutSection .hours li {
+    margin: 5px 0; /* Space between hours */
+    font-size: 16px; /* Font size for list items */
+  }
+  
+  .aboutSection .contact p {
+    margin: 5px 0; /* Space between phone numbers */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .aboutSection {
+      flex-direction: column; /* Stack on smaller screens */
+      height: auto; /* Remove full height */
+    }
+  
+    .aboutSection .leftPart {
+      height: 300px; /* Set a height for the left part on small screens */
+    }
+  
+    .aboutSection .aboutbannerImg {
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+  
+    .aboutSection .rightPart {
+      padding: 20px; /* Reduce padding on smaller screens */
+    }
+  }
+  
+  .aboutSection .hoursName, .aboutSection .contactPhone{
+    text-decoration: underline;
+  }

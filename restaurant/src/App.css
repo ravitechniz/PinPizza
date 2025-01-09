@@ -1,0 +1,618 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hide{
+  display: none;
+}
+.headerBackground{
+  background-color: #e3f2fd!important;
+}
+.headerIcon{
+  line-height: 2.5;
+}
+.headerIcon i{
+  padding: 5px;
+}
+ 
+
+.banner {
+  position: relative;
+  width: 100%; /* Set the desired width of the banner */
+  max-height: 750px; /* Adjust based on your banner image dimensions */
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+.logo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+  background: gray;
+}
+
+.categorySection_s {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Default: 5 columns */
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 1200px) {
+  .categorySection_s {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .categorySection_s {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .categorySection_s {
+      grid-template-columns: 1fr; /* 1 column on mobile devices */
+  }
+}
+
+.categoryImage_s {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.categoryImage_s img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.categoryImage_s:hover img {
+  transform: scale(1.1);
+}
+
+.categoryImage_s span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.categoryImage_s:hover span {
+  opacity: 1;
+}
+
+/* Adjust font size of the overlay text on small screens */
+@media (max-width: 480px) {
+  .categoryImage_s span {
+      font-size: 1.2em; /* Slightly smaller text on mobile */
+  }
+}
+
+
+
+
+/* ============== */
+/* .mainContainer {
+  background-image: url('./img/pexels-chanwalrus-958545.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+}
+.aboutSection{
+  background-color: white;
+  height: 500px;
+  width: 50%;
+  text-align: center;
+}
+.orderDeliverySection{
+  background-color: white;
+  height: 500px;
+  width: 50%;
+  float: right;
+  text-align: center;
+}
+.leftPart, .rightPart{
+  padding: 15px;
+}
+.leftPart ul li, .rightPart ul li{
+  list-style-type: none;
+}
+.deliveryPartners{
+  display: flex;
+  justify-content: space-around;
+} */
+/* Container */
+.mainContainer {
+  background-image: url('./img/pexels-chanwalrus-958545.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+}
+
+/* Sections */
+.aboutSection1, .orderDeliverySection1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  height: 565px;
+}
+.aboutSection{
+  display: 1flex;
+  justify-content: 1start;
+  background: white;
+  width: 50%;
+  height: 500px;
+  text-align: center;
+}
+.orderDeliverySection{
+  display: 1flex;
+  justify-content: 1start;
+  background: white;
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  float: right;
+}
+.rightPart {
+  padding: 7%;
+}
+
+/* Headings */
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: black;
+  margin: 15px 0;
+  opacity: 1;
+}
+
+/* Hours and Contact Info */
+ 
+.hours ul, .contact p {
+  font-size: 1em;
+  color: #444;
+}
+
+.hours ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Delivery Partners */
+.deliveryPartners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  list-style-type: none;
+  margin: 15px 0;
+}
+
+.deliveryPartners li {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutSection, .orderDeliverySection {
+    width: 100%;
+  }
+
+  .deliveryPartners {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
+/* infoCss */
+.infoSection {
+  background-color: #f8f9fa; /* Light background */
+}
+
+.infoBox {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 650px;
+  padding: 20%;
+}
+.infoBox h3 {
+  color: #8B0000;
+  font-size: 33px;
+  font-weight: 100;
+}
+.infoBox p {
+  color: #666;
+  padding: 10%;
+}
+.info-image{
+  width: 30%;
+  border-radius: 50%;
+  border: 1px solid;
+  height: 110px;
+  background-color: #dcdcdc4d;
+}
+.dubbleComma{
+  font-size: 75px;
+   
+}
+
+/* connectMainContainer */
+/* Main container background and styling */
+.connectMainContainer {
+  background-image: url('./img/pexels-chanwalrus-958545.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  opacity: 0.8;
+}
+
+/* Connect section styling */
+.connectSection {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%; /* Responsive width */
+}
+
+/* Header styling */
+.connectSection h4 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Social media icons */
+.connectIcon i {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.connectIcon i:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .connectMainContainer {
+    height: 400px;
+  }
+
+  .connectSection h4 {
+    font-size: 1.5em;
+  }
+
+  .connectIcon i {
+    font-size: 1.2em;
+    margin: 0 8px;
+  }
+}
+
+/* videoSection */
+/* Video Section Container */
+.videoSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  gap: 20px;
+  margin: 2% 0;
+  border-top: 2px solid;
+}
+
+/* Video Container Styling */
+.videoContainer {
+  flex: 1 1 500px;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.videoContent {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Testimonials Styling */
+.testimonials {
+  flex: 1 1 500px;
+  max-width: 500px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial Text */
+.testimonials h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+.testimonials .author {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.morePressButton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  font-size: 0.9em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.morePressButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .videoContainer,
+  .testimonials {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* footer banner */
+.footerBannerSection {
+  background-image: url('./img/pexels-chanwalrus-958545.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 750px;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+}
+.footerSection{
+  text-align: center;
+}
+.footerTitleOne{
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+  color: rgb(255, 255, 255);
+  font-family: initial;
+  font-size: 36px;
+  font-family: lulo-clean-w01-one-bold, sans-serif;
+}
+.footerTitleTwo{
+  font-weight: 700;
+  font-family: lulo-clean-w01-one-bold, sans-serif;
+  font-size: 75px;
+  color: #FAFAFA;
+}
+/* fooer last */
+/* Footer Basic Styling */
+.footer {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Footer Sections */
+.footerSection {
+  flex: 1 1 300px;
+   
+}
+
+.footerSection h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Footer Logo and Description */
+.footerLogo h2 {
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+.footerLogo p {
+  font-size: 0.9em;
+  color: #cccccc;
+}
+
+/* Footer Links Styling */
+.footerLinks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 8px;
+}
+
+.footerLinks a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footerLinks a:hover {
+  color: #007bff;
+}
+
+/* Social Icons Styling */
+.footerSocial .socialIcons a {
+  color: #f1f1f1;
+  margin-right: 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.footerSocial .socialIcons a:hover {
+  color: #007bff;
+}
+
+/* Copyright Section */
+.footerCopyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.8em;
+  color: #cccccc;
+  border-top: 1px solid #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.menulist{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer .footer_logo-image {
+   
+  width: 100px;
+  height: auto;
+  background: gray;
+}
